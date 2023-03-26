@@ -5,6 +5,7 @@ body {
 }
 header {
   background-color: var(--background-light);
+  border-bottom: var(--main-border);
 }
 footer {
   background-color: var(--backgroud-dark);
@@ -12,6 +13,7 @@ footer {
 :root {
   --backgroud-dark: #2f303a;
   --background-light: #ffffff;
+  --background-medium: #f5f4fa;
   --logo-1: #2196f3;
   --logo-2: #000000;
   --logo-3: #ffffff;
@@ -25,6 +27,20 @@ footer {
   --main-btn-text: #ffffff;
   --text-global: #212121;
   --text-content: #757575;
+  --main-border: 1px solid #ececec;
+  --card-border: 1px solid #eeeeee;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 .nav-link {
   text-decoration: none;
@@ -50,6 +66,9 @@ footer {
   color: var(--address);
   font-size: 14px;
   line-height: 1.71;
+  font-style: normal;
+  margin-top: 20px;
+  margin-bottom: 4.5px;
 }
 .contact-link-header:focus,
 .contact-link-header:hover,
@@ -64,15 +83,23 @@ footer {
   line-height: 1.63;
   font-weight: 500;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 .filter-btn:focus,
 .filter-btn:hover {
   color: var(--active2);
   background-color: var(--active1);
 }
+.article h3 {
+  margin-bottom: 5px;
+}
 .article p {
   color: var(--text-content);
   line-height: 1.71;
+  margin-top: 5px;
+  max-width: 270px;
 }
 .article {
   font-size: 14px;
@@ -81,31 +108,72 @@ footer {
 .team {
   line-height: 1.19;
 }
+.team-background {
+  background-color: var(--background-medium);
+  margin: 0 auto;
+}
+.team-card {
+  height: 368px;
+  width: 270px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background-color: var(--background-light);
+}
+.team-card figcaption {
+  padding: 30px;
+}
 .team .caption {
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
+  margin-bottom: 5px;
 }
 .team .subcaption {
   color: var(--text-content);
   font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+}
+.portfolio-card {
+  height: 404px;
+  width: 370px;
+  border-bottom: var(--card-border);
+  border-right: var(--card-border);
+  border-left: var(--card-border);
+}
+.portfolio-card figcaption {
+  padding: 20px 24px;
 }
 .portfolio .caption {
   font-size: 18px;
   line-height: 2;
   font-weight: 700;
+  margin-bottom: 2px;
 }
 .portfolio .subcaption {
   color: var(--text-content);
   font-size: 16px;
   line-height: 1.88;
+  margin-top: 2px;
 }
 .main-background {
   background-color: var(--backgroud-dark);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  align-items: center;
 }
 .main-background h2 {
   color: var(--main-header);
   font-size: 44px;
   line-height: 1.36;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  max-width: 696px;
 }
 .main-background button {
   color: var(--main-btn-text);
@@ -114,11 +182,16 @@ footer {
   line-height: 1.88;
   font-weight: 700;
   cursor: pointer;
+  padding: 10px 41.5px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
 }
 .logo {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+  margin-right: 46.5px;
 }
 .logo a {
   text-decoration: none;
@@ -134,4 +207,68 @@ footer {
 .section-header {
   font-size: 36px;
   line-height: 1.17;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
+  align-content: center;
+  padding: 24.5px 15px;
+  flex-wrap: wrap;
+}
+main > .container {
+  padding-bottom: 0;
+}
+.menu {
+  display: flex;
+  margin-left: 46.5px;
+  margin-right: 185.5px;
+  gap: 46px;
+}
+.contact {
+  display: flex;
+  margin-left: 185.5px;
+  margin-right: 6px;
+  gap: 50px;
+}
+.section {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+}
+.section h2 {
+  width: 1170px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section figure {
+  margin: 0 auto;
+}
+.section.activities {
+  padding-top: 0px;
+}
+.section.team {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.filter {
+  display: flex;
+  gap: 8px;
+  margin-left: 299px;
+  margin-bottom: 20px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: flex-start;
+  padding: 60px 15px;
+}
+.contact-footer {
+  margin: 4.5px 0px;
 }
