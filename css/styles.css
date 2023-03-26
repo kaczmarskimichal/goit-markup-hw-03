@@ -111,6 +111,7 @@ p {
 .team-background {
   background-color: var(--background-medium);
   margin: 0 auto;
+  padding-top: 94px;
 }
 .team-card {
   height: 368px;
@@ -207,6 +208,8 @@ p {
 .section-header {
   font-size: 36px;
   line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
 }
 .container {
   display: flex;
@@ -216,6 +219,7 @@ p {
   align-content: center;
   padding: 24.5px 15px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 main > .container {
   padding-bottom: 0;
@@ -240,15 +244,12 @@ main > .container {
   gap: 30px;
   margin: 0 auto;
 }
-.section h2 {
-  width: 1170px;
-  text-align: center;
-  margin-bottom: 20px;
-}
 .section figure {
   margin: 0 auto;
 }
-.section.activities {
+.section.team,
+.section.activities,
+.section.portfolio {
   padding-top: 0px;
 }
 .section.team {
@@ -259,8 +260,8 @@ main > .container {
 .filter {
   display: flex;
   gap: 8px;
-  margin-left: 299px;
-  margin-bottom: 20px;
+  margin-top: 94px;
+  margin-bottom: 50px;
 }
 .footer {
   display: flex;
